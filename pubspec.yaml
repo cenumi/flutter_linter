@@ -1,6 +1,6 @@
 name: flutter_linter
 description: linter for projects
-version: 0.0.1
+version: 0.0.2
 homepage:
 
 environment:
@@ -11,9 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
   lint: ^1.8.2
+  dart_code_metrics: ^4.10.1
+
 
 dev_dependencies:
-  dart_code_metrics: ^4.10.1
   flutter_test:
     sdk: flutter
 
