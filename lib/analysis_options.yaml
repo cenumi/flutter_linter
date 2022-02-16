@@ -9,6 +9,7 @@ analyzer:
     - '**/*.pb.dart'
     - '**/*.freezed.dart'
     - '**/from_sdk/*.dart'
+    - '**/*.chopper.dart'
 
 linter:
   rules:
@@ -24,6 +25,7 @@ dart_code_metrics:
     - '**/*.pb.dart'
     - '**/*.freezed.dart'
     - '**/from_sdk/*.dart'
+    - '**/*.chopper.dart'
 
   rules:
     - avoid-dynamic
