@@ -1,0 +1,44 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  plugins:
+    - dart_code_metrics
+
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.pb.dart'
+    - '**/*.freezed.dart'
+    - '**/from_sdk/*.dart'
+
+linter:
+  rules:
+    avoid_unused_constructor_parameters: false
+    always_use_package_imports: false
+    sort_pub_dependencies: false
+
+
+dart_code_metrics:
+
+  rules-exclude:
+    - '**/*.g.dart'
+    - '**/*.pb.dart'
+    - '**/*.freezed.dart'
+    - '**/from_sdk/*.dart'
+
+  rules:
+    - avoid-dynamic
+    - avoid-global-state
+    - avoid-missing-enum-constant-in-map
+    - avoid-throw-in-catch-block
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
+    - avoid-unrelated-type-assertions
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - no-equal-then-else
+    - prefer-trailing-comma
+    - always-remove-listener
+    - avoid-border-all
+    - avoid-unnecessary-setstate
+    - prefer-const-border-radius
