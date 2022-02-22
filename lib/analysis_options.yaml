@@ -28,7 +28,7 @@ dart_code_metrics:
     - '**/*.chopper.dart'
 
   rules:
-    - avoid-dynamic
+#    - avoid-dynamic
     - avoid-global-state
     - avoid-missing-enum-constant-in-map
     - avoid-throw-in-catch-block
