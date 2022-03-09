@@ -28,7 +28,8 @@ dart_code_metrics:
     - '**/*.chopper.dart'
 
   rules:
-#    - avoid-dynamic
+    - avoid-collection-methods-with-unrelated-types
+    #    - avoid-dynamic
     - avoid-global-state
     - avoid-missing-enum-constant-in-map
     - avoid-throw-in-catch-block
@@ -37,7 +38,7 @@ dart_code_metrics:
     - avoid-unrelated-type-assertions
     - newline-before-return
     - no-boolean-literal-compare
-    - no-empty-block
+#    - no-empty-block
     - no-equal-then-else
     - prefer-trailing-comma
     - always-remove-listener

@@ -10,8 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # https://pub.dev/packages/lint
   lint: ^1.8.2
-  dart_code_metrics: ^4.11.0
+
+  # https://pub.dev/packages/dart_code_metrics
+  dart_code_metrics: ^4.12.0
 
 
 dev_dependencies:
