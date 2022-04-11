@@ -153,7 +153,7 @@ dart_code_metrics:
     - avoid-unnecessary-setstate
 
     # https://dartcodemetrics.dev/docs/rules/flutter/avoid-wrapping-in-padding
-    - avoid-wrapping-in-padding
+    # - avoid-wrapping-in-padding
 
     # https://dartcodemetrics.dev/docs/rules/flutter/prefer-const-border-radius
     - prefer-const-border-radius
