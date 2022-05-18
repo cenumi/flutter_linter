@@ -8,7 +8,6 @@ analyzer:
     - "**/*.g.dart"
     - "**/*.pb.dart"
     - "**/*.freezed.dart"
-    - "**/from_sdk/*.dart"
     - "**/*.chopper.dart"
 
 linter:
@@ -17,6 +16,7 @@ linter:
     always_use_package_imports: false
     sort_pub_dependencies: false
     require_trailing_commas: false
+    unused_element: false
 
 dart_code_metrics:
   rules-exclude:
@@ -27,6 +27,8 @@ dart_code_metrics:
     - "**/*.chopper.dart"
 
   rules:
+    # =====  Common =====
+
     # https://dartcodemetrics.dev/docs/rules/common/avoid-collection-methods-with-unrelated-types
     - avoid-collection-methods-with-unrelated-types
 
@@ -48,6 +50,9 @@ dart_code_metrics:
     # https://dartcodemetrics.dev/docs/rules/common/avoid-nested-conditional-expressions
     - avoid-nested-conditional-expressions:
         acceptable-level: 2
+
+    # https://dartcodemetrics.dev/docs/rules/common/avoid-non-ascii-symbols
+    # - avoid-non-ascii-symbols
 
     # https://dartcodemetrics.dev/docs/rules/common/avoid-non-null-assertion
     # - avoid-non-null-assertion
