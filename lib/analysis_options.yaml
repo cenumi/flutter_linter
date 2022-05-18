@@ -10,13 +10,15 @@ analyzer:
     - "**/*.freezed.dart"
     - "**/*.chopper.dart"
 
+  errors:
+    unused_element: ignore
+
 linter:
   rules:
     avoid_unused_constructor_parameters: false
     always_use_package_imports: false
     sort_pub_dependencies: false
     require_trailing_commas: false
-    unused_element: false
 
 dart_code_metrics:
   rules-exclude:
