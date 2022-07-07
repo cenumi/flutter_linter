@@ -1,6 +1,6 @@
 name: flutter_linter
 description: linter for projects
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/cenumi/flutter_linter.git
 
 environment:
@@ -15,7 +15,7 @@ dependencies:
   lint: ^1.8.2
 
   # https://pub.dev/packages/dart_code_metrics
-  dart_code_metrics: ^4.15.2
+  dart_code_metrics: ^4.16.0
 
 dev_dependencies:
   flutter_test:
