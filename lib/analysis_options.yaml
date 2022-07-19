@@ -31,8 +31,9 @@ dart_code_metrics:
   rules:
     # =====  Common =====
 
+    # buggy now
     # https://dartcodemetrics.dev/docs/rules/common/avoid-collection-methods-with-unrelated-types
-    - avoid-collection-methods-with-unrelated-types
+    # - avoid-collection-methods-with-unrelated-types
 
     # https://dartcodemetrics.dev/docs/rules/common/avoid-dynamic
     # - avoid-dynamic
