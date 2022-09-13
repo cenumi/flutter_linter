@@ -20,6 +20,7 @@ linter:
     sort_pub_dependencies: false
     require_trailing_commas: false
 
+
 dart_code_metrics:
   rules-exclude:
     - "**/*.g.dart"
@@ -161,6 +162,9 @@ dart_code_metrics:
     # https://dartcodemetrics.dev/docs/rules/flutter/avoid-unnecessary-setstate
     - avoid-unnecessary-setstate
 
+    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-use-expanded-as-spacer
+    - avoid-use-expanded-as-spacer
+
     # https://dartcodemetrics.dev/docs/rules/flutter/avoid-wrapping-in-padding
     # - avoid-wrapping-in-padding
 
@@ -168,7 +172,7 @@ dart_code_metrics:
     - prefer-const-border-radius
 
     # https://dartcodemetrics.dev/docs/rules/flutter/prefer-extracting-callbacks
-    # - prefer-extracting-callbacks
+#    - prefer-extracting-callbacks
 
     # https://dartcodemetrics.dev/docs/rules/flutter/prefer-single-widget-per-file
     # - prefer-single-widget-per-file
