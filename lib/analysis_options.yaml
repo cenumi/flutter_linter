@@ -1,8 +1,8 @@
 include: package:lint/analysis_options.yaml
 
 analyzer:
-#  plugins:
-#    - dart_code_metrics
+  plugins:
+    - custom_lint
 
   exclude:
     - "**/*.g.dart"
@@ -21,158 +21,157 @@ linter:
     require_trailing_commas: false
 
 
-dart_code_metrics:
-  rules-exclude:
-    - "**/*.g.dart"
-    - "**/*.pb.dart"
-    - "**/*.freezed.dart"
-    - "**/from_sdk/*.dart"
-    - "**/*.chopper.dart"
-
-  rules:
-    # =====  Common =====
-
-    # buggy now
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-collection-methods-with-unrelated-types
-    # - avoid-collection-methods-with-unrelated-types
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-dynamic
-    # - avoid-dynamic
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-global-state
-    - avoid-global-state
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-ignoring-return-values
-    # - avoid-ignoring-return-values
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-late-keyword
-    # - avoid-late-keyword
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-missing-enum-constant-in-map
-    - avoid-missing-enum-constant-in-map
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-nested-conditional-expressions
-    - avoid-nested-conditional-expressions:
-        acceptable-level: 2
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-non-ascii-symbols
-    # - avoid-non-ascii-symbols
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-non-null-assertion
-    # - avoid-non-null-assertion
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-throw-in-catch-block
-    - avoid-throw-in-catch-block
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-unnecessary-type-assertions
-    - avoid-unnecessary-type-assertions
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-unnecessary-type-casts
-    - avoid-unnecessary-type-casts
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-unrelated-type-assertions
-    - avoid-unrelated-type-assertions
-
-    # https://dartcodemetrics.dev/docs/rules/common/avoid-unused-parameters
-    # - avoid-unused-parameters
-
-    # https://dartcodemetrics.dev/docs/rules/common/ban-name
-    # - ban-name
-
-    # https://dartcodemetrics.dev/docs/rules/common/binary-expression-operand-order
-    - binary-expression-operand-order
-
-    # https://dartcodemetrics.dev/docs/rules/common/double-literal-format
-    # - double-literal-format
-
-    # https://dartcodemetrics.dev/docs/rules/common/format-comment
-    # - format-comment
-
-    # https://dartcodemetrics.dev/docs/rules/common/member-ordering-extended
-    # - member-ordering-extended
-
-    # https://dartcodemetrics.dev/docs/rules/common/member-ordering
-    # - member-ordering
-
-    # https://dartcodemetrics.dev/docs/rules/common/newline-before-return
-    - newline-before-return
-
-    # https://dartcodemetrics.dev/docs/rules/common/no-boolean-literal-compare
-    - no-boolean-literal-compare
-
-    # https://dartcodemetrics.dev/docs/rules/common/no-empty-block
-    # - no-empty-block
-
-    # https://dartcodemetrics.dev/docs/rules/common/no-equal-arguments
-    # - no-equal-arguments
-
-    # https://dartcodemetrics.dev/docs/rules/common/no-equal-then-else
-    - no-equal-then-else
-
-    # https://dartcodemetrics.dev/docs/rules/common/no-magic-number
-    # - no-magic-number
-
-    # https://dartcodemetrics.dev/docs/rules/common/no-object-declaration
-    # - no-object-declaration
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-async-await
-    # - prefer-async-await
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-commenting-analyzer-ignores
-    # - prefer-commenting-analyzer-ignores
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-conditional-expressions
-    # - prefer-conditional-expressions
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-correct-identifier-length
-    # - prefer-correct-identifier-length
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-correct-type-name
-    # - prefer-correct-type-name
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-first
-    - prefer-first
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-immediate-return
-    # - prefer-immediate-return
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-last
-    - prefer-last
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-match-file-name
-    # - prefer-match-file-name
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-moving-to-variable
-    # - prefer-moving-to-variable
-
-    # https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
-    # - prefer-trailing-comma
-
-    # https://dartcodemetrics.dev/docs/rules/common/tag-name
-    # - tag-name
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/always-remove-listener
-    - always-remove-listener
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-border-all
-    - avoid-border-all
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-returning-widgets
-    # - avoid-returning-widgets
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-unnecessary-setstate
-    - avoid-unnecessary-setstate
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-use-expanded-as-spacer
-    - avoid-use-expanded-as-spacer
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-wrapping-in-padding
-    # - avoid-wrapping-in-padding
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/prefer-const-border-radius
-    - prefer-const-border-radius
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/prefer-extracting-callbacks
-#    - prefer-extracting-callbacks
-
-    # https://dartcodemetrics.dev/docs/rules/flutter/prefer-single-widget-per-file
-    # - prefer-single-widget-per-file
+#dart_code_metrics:
+#  rules-exclude:
+#    - "**/*.g.dart"
+#    - "**/*.pb.dart"
+#    - "**/*.freezed.dart"
+#    - "**/*.chopper.dart"
+#
+#  rules:
+#    # =====  Common =====
+#
+#    # buggy now
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-collection-methods-with-unrelated-types
+#    # - avoid-collection-methods-with-unrelated-types
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-dynamic
+#    # - avoid-dynamic
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-global-state
+#    - avoid-global-state
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-ignoring-return-values
+#    # - avoid-ignoring-return-values
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-late-keyword
+#    # - avoid-late-keyword
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-missing-enum-constant-in-map
+#    - avoid-missing-enum-constant-in-map
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-nested-conditional-expressions
+#    - avoid-nested-conditional-expressions:
+#        acceptable-level: 2
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-non-ascii-symbols
+#    # - avoid-non-ascii-symbols
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-non-null-assertion
+#    # - avoid-non-null-assertion
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-throw-in-catch-block
+#    - avoid-throw-in-catch-block
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-unnecessary-type-assertions
+#    - avoid-unnecessary-type-assertions
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-unnecessary-type-casts
+#    - avoid-unnecessary-type-casts
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-unrelated-type-assertions
+#    - avoid-unrelated-type-assertions
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/avoid-unused-parameters
+#    # - avoid-unused-parameters
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/ban-name
+#    # - ban-name
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/binary-expression-operand-order
+#    - binary-expression-operand-order
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/double-literal-format
+#    # - double-literal-format
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/format-comment
+#    # - format-comment
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/member-ordering-extended
+#    # - member-ordering-extended
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/member-ordering
+#    # - member-ordering
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/newline-before-return
+#    - newline-before-return
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/no-boolean-literal-compare
+#    - no-boolean-literal-compare
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/no-empty-block
+#    # - no-empty-block
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/no-equal-arguments
+#    # - no-equal-arguments
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/no-equal-then-else
+#    - no-equal-then-else
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/no-magic-number
+#    # - no-magic-number
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/no-object-declaration
+#    # - no-object-declaration
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-async-await
+#    # - prefer-async-await
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-commenting-analyzer-ignores
+#    # - prefer-commenting-analyzer-ignores
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-conditional-expressions
+#    # - prefer-conditional-expressions
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-correct-identifier-length
+#    # - prefer-correct-identifier-length
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-correct-type-name
+#    # - prefer-correct-type-name
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-first
+#    - prefer-first
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-immediate-return
+#    # - prefer-immediate-return
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-last
+#    - prefer-last
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-match-file-name
+#    # - prefer-match-file-name
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-moving-to-variable
+#    # - prefer-moving-to-variable
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/prefer-trailing-comma
+#    # - prefer-trailing-comma
+#
+#    # https://dartcodemetrics.dev/docs/rules/common/tag-name
+#    # - tag-name
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/always-remove-listener
+#    - always-remove-listener
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-border-all
+#    - avoid-border-all
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-returning-widgets
+#    # - avoid-returning-widgets
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-unnecessary-setstate
+#    - avoid-unnecessary-setstate
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-use-expanded-as-spacer
+#    - avoid-use-expanded-as-spacer
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/avoid-wrapping-in-padding
+#    # - avoid-wrapping-in-padding
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/prefer-const-border-radius
+#    - prefer-const-border-radius
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/prefer-extracting-callbacks
+##    - prefer-extracting-callbacks
+#
+#    # https://dartcodemetrics.dev/docs/rules/flutter/prefer-single-widget-per-file
+#    # - prefer-single-widget-per-file
